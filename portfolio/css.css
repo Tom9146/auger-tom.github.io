@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+ background-image: url(mercedesA45.jpg);  /* Remplacez par le chemin de votre image */
+ height: 100vh;
+ justify-content: center;  /* centre horizontalement */
+ align-items: center;      /* centre verticalement */
+ background-size: cover;         /* Couvre toute la page */
+ background-position: center;    /* centre l’image */
+ background-repeat: none;
+ margin: 0;
+}
+
+/* barre de navigation*/
+.boutons{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: transparent;
+  justify-items: center;
+  background-color: transparent; /* Couleur de fond */
+  color: rgb(255, 255, 255);   /* Couleur du texte */
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;     /* Bords arrondis */
+  cursor: pointer;        /* Curseur de type pointeur */
+  font-size: 40px;        /* Taille du texte */
+}
+
+/* Style des boutons dans la barre de navigation */
+.boutons button {
+  padding: 10px 20px;
+  font-size: 50px;
+  border: 2px solid transparent;
+  border-radius: 5px; /* Coins arrondis */
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boutons button:hover {
+    transform: translateY(-10px); /* Déplace le bouton de 5px vers le haut */
+}
+/* menu dérolant */
+.dropbtn {
+    background-color: transparent;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover{
+    animation-name: degrade;
+    animation-duration: 4s;
+    /*animation-iteration-count: infinite; Répète l'animation à l'infini */
+  }
+
+
+  @keyframes degrade {
+    from {color: black;}
+    to {color:gray;}
+  }
+
+  .dropdown {
+    position: relative;
+    display:inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5C474A;
+    border: 5px solid black;
+    border-radius: 0px;     /* Bords arrondis */
+    min-width: 250px;
+    /*box-shadow: 50px 8px 50px 0px rgba(0,0,0,0.2);
+    z-index: 1;*/
+    opacity: 3;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .dropdown-content a:hover {
+    background-color: transparent;
+    color:#800100;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: transparent;
+  }
+
+.column {
+  float:left;
+  padding: 10px;
+}
+
+/* Portfolio à droite*/
+.column.h1 {
+  color:white;
+  display: inline-block;     /* Pour s'ajuster à la taille du texte */
+  padding: 10px;             /* Espace autour du texte */
+  border: 2px solid rgb(255, 255, 255);   /* Bordure */
+  border-radius: 50%;        /* Rend le contour circulaire */
+  text-align: center;         /* Centre le texte */
+  font-size: 30px;        /* Taille du texte */
+  width: 32%;
+}
+
+/* Presentation*/
+.column.middle {
+  color:white;
+  display: inline-block;     /* Pour s'ajuster à la taille du texte */
+  width: 55%;
+  font-size: 18px;
+  justify-items: left;
+  border: 4px solid gray;
+  animation-name: animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; /*Répète l'animation à l'infini */
+  border-radius: 10%;        /* Rend le contour circulaire */
+}
+
+@keyframes animation {
+    from {border-color: black;}
+    to {border-color:gray;}
+  }
+
+/* effet puce*/
+ul .parcours {
+    list-style-type: circle;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*h1{
+ color:white;
+ font-size: 75px;
+ position: absolute;
+ top: 250px;  /* Distance depuis le haut de la page 
+ left: 930px; /* Distance depuis la gauche de la page 
+ display: inline-block;     /* Pour s'ajuster à la taille du texte 
+ padding: 50px;             /* Espace autour du texte 
+ border: 2px solid rgb(255, 255, 255);   /* Bordure 
+ border-radius: 70%;        /* Rend le contour circulaire 
+ text-align: center;         /* Centre le texte 
+}*/
+
+.contact a {
+    text-decoration: none;
+    color:white;
+}
+.contact {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: transparent;
+}
+    .email-button:hover {
+    background-color: transparent; /* Couleur gris */
+    color: gray;
+}
+
+    .call-button:hover {
+    background-color: transparent; /* Couleur gris */
+    color: gray;
+}
+    
+    
+   boutton{
+            padding: 10px 20px;     /* Espace intérieur */
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50px;     /* Bords arrondis */
+            cursor: pointer;        /* Curseur de type pointeur */
+    }
+
+
+    .boutons a {
+        text-decoration: none;
+        color: white;
+    }
+
+    
+    #borderimg {
+        position: absolute;
+        border: 10px solid transparent;
+        padding: 15pxf;
+        border-image: url(bordure\ degrader\ fond\ gris.png) 70 round;
+    }
+    
+
+    /* Effet au survol */
+    .boutons button:hover {
+        background-color: transparent;
+        color: gray;
+    }

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background: linear-gradient(to bottom, yellow, orange); /* dégrader bleu ciel vers bleu foncé de haut en bas*/
+    height: 100vh;
+    justify-content: center;  /* centre horizontalement */
+    align-items: center;      /* centre verticalement */
+    background-size: cover;         /* Couvre toute la page */
+    background-position: center;    /* centre l’image */
+    background-repeat: none;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* fond semi-transparent */
+    padding: 20px;
+    border-radius: 0 0 30px 30px; /* arrondi en bas */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ombre */
+    backdrop-filter: blur(6px); /* effet flou si supporté */
+}
+  
+  header h1 {
+    margin: 0;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+
+.btn-home {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+  .btn-home:hover {
+    background-color: white;
+    color: #004080;
+}
+
+/* Chaque slide = 100% écran */
+.slide {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 60px;
+    background: linear-gradient(to bottom, yellow, orange, red);
+    gap: 40px;
+  }
+
+  .slide2 {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 60px;
+    background: linear-gradient(to bottom,red,orange, yellow);
+    gap: 40px;
+  }
+  
+  .column.text {
+    flex: 1;
+    color: white;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  .column.image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .column.image img {
+    max-width: 100%;
+    height: auto;
+    background: transparent;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .page-indicator {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 18px;
+    color: white;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+  }
